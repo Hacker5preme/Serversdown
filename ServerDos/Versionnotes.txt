@@ -1,6 +1,8 @@
 Version Notes:
-- Version 0.1 
-- Supported Options of Serversdown:
+- Version 0.2
+- Supported Options of ServerDos:
   -> Syn Flood
 - Supported Options of Syn Flood:
   -> Non anonymized attack on target over one port
+  -> Attack over one port anonymized with one Ip Adress
+  
