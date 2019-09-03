@@ -11,7 +11,7 @@ Requierements:
 How to start the script:
 
 - Install the script by running: "sudo bash install.sh"
-- Then run the script by typing " python Serversdown.py"
+- Then run the script by typing " python ServerDos.py"
 
 For further informations read the version notes.
 
