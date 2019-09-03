@@ -1,0 +1,7 @@
+Version Notes:
+- Version 0.3
+- Supported Options of ServerDos:
+  -> Syn Flood
+- Supported Options of Syn Flood:
+  -> Fully supporting anonymization
+  -> Attack still only over one targetport  
