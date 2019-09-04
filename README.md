@@ -17,4 +17,4 @@ For further informations read the version notes.
 
 Use this tool only if you are allowed by the owner of the server ;)
 
-If you have any questions feel free to contact me: Hackerspreme@gmail.com
+If you have any questions feel free to contact me: Hackerspreme@protonmail.com
