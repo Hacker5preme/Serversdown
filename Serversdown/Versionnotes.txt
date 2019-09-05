@@ -1,6 +1,6 @@
 Version Notes:
 - Version 0.3
-- Supported Options of ServerDos:
+- Supported Options of Serversdown:
   -> Syn Flood
 - Supported Options of Syn Flood:
   -> Fully supporting anonymization
