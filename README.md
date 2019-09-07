@@ -1,7 +1,7 @@
 # Serversdown
 This is a tool written by hacker5preme to give people the possibilitie to attack servers anonymized.
 
-It is written in Python 2.7.
+It is written in Python 2.7
 
 Requierements:
 
