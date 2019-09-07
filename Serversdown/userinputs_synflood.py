@@ -15,7 +15,7 @@ def supcountries():
 
 
 def definetarget():
-  print 'Welcome to syn flood attack coded by HaCkEr5pReMe'
+  print 'Welcome to syn flood attack coded by hacker5preme'
   print ''  
   print 'Please enter the target IP'
   destination = raw_input()
