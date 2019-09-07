@@ -6,8 +6,8 @@ It is written in Python 2.7.
 Requierements:
 
 - A version of python 2
-- The rest is getting installed by the script
 - You are root
+
 How to start the script:
 
 - Install the script by running: "sudo bash install.sh"
