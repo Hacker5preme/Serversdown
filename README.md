@@ -1,17 +1,21 @@
 # Serversdown
-This is a tool written by hacker5preme to give people the possibilitie to attack servers anonymized.
+This is a tool written by Hacker5preme to give people the possibility to attack targets per denial of service attacks anonymized.
 
-It is written in Python 2.7
+Serversdown was coded in a Linux environment and the version of Python is 2.7.
 
 Requierements:
+- A Linux distribution.
+- Python version 2.7
+- You are root.
 
-- A version of python 2
-- You are root
+How does Serversdown work:
+- Serversdown attacks the target through different denial of service attacks.
+-> For further information about supported attack possibilitys read the current version notes
+-> [Current Versionnotes](
 
-How to start the script:
 
-- Install the script by running: "sudo bash install.sh"
-- Then run the script by typing " python Serversdown.py"
+
+
 
 For further information read the version notes.
 
