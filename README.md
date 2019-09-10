@@ -11,7 +11,7 @@ Requierements:
 How does Serversdown work:
 - Serversdown attacks the target through different denial of service attacks.
 -> For further information about supported attack possibilitys read the current version notes
--> [Current Versionnotes](
+-> [Current Versionnotes](https://github.com/Hacker5preme/Serversdown/blob/master/Serversdown/Versionnotes.txt)
 
 
 
