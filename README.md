@@ -13,7 +13,7 @@ How to start the script:
 - Install the script by running: "sudo bash install.sh"
 - Then run the script by typing " python Serversdown.py"
 
-For further informations read the version notes.
+For further information read the version notes.
 
 Use this tool only if you are allowed by the owner of the server ;)
 
