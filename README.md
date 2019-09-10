@@ -13,12 +13,13 @@ How does Serversdown work:
 -> For further information about supported attack possibilitys read the current version notes
 -> [Current Versionnotes](https://github.com/Hacker5preme/Serversdown/blob/master/Serversdown/Versionnotes.txt)
 
+Legal notice : Only use this tool for penetration testing if you are allowed and authorised  by the owner of the target. ;)
 
+How to download and use this tool:
+- Execute "git clone + link of the repository" in the terminal.
+- Navigate to the cloned folder.
+- Execute "chmod +x install.sh" in the terminal.
+- Execute "chmod +x Serversdown.py" in the terminal.
+- Execute "python Serversdown.py" in the terminal.
 
-
-
-For further information read the version notes.
-
-Use this tool only if you are allowed by the owner of the server ;)
-
-If you have any questions feel free to contact me: hacker5preme@protonmail.com
+# Start attacking
