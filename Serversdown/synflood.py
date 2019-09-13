@@ -18,6 +18,7 @@ supcountries = supcountries()
 destination = definetarget()
 targetport = defineporttarget()
 awnser_anonymizing = anonymizing_input(supcountries)
+
 cnt = 0
 silva = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 silva.connect((destination, targetport))
@@ -36,7 +37,7 @@ if awnser_anonymizing in supcountries or awnser_anonymizing == 'all':
          cnt = cnt + 1
 
 if awnser_anonymizing == yourIP:
-   Ip_range = '192.168.0.2'
+   Ip_range = yourIP
    os.system('clear')
    print 'HaCkEr5pReMe'
    print ''
@@ -64,4 +65,6 @@ if type(awnser_anonymizing) == str and awnser_anonymizing != yourIP:
          print str(cnt) + ' packeges send'
 
 
+if type(awnser_anonymizing) == list and awnser_anonymizing[0] in supcountries:
+       print 'VAMOOOOOOOOOOOOS!!!'
 
