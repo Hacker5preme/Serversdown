@@ -48,6 +48,7 @@ def anonymizing_input(supcountries):
       print '1: Input your one IP-adress you want to spoof to'
       print '2: Choose a country and we change the ip adress every 10 packages to another one of the chosen country' 
       print '3: Your IP-adress will change evrery 10 packages and all over the globe'
+      print '4: Choose multiple Countries to anoymize through'
       print ''
       awnserchoice = raw_input('Input the number of your choice: ')
       
@@ -80,7 +81,24 @@ def anonymizing_input(supcountries):
          print 'Your sourceip will be switching through the supported countries: ' + str(supcountries)
          allcountrys = 'all'
          return allcountrys
- 
+       
+       
+      if(awnserchoice == '4'):
+         print ''
+         print 'Your Choice: 4'
+         print 'Supported countries till now ' + str(supcountries)
+         amountcountrys = raw_input('Please input the amount of countries you want to select ')
+         amountcountrys = int(amountcountrys)
+         counter = 0
+         countryawnser = []
+         while counter < amountcountrys:
+               counter = counter + 1
+               userc = raw_input(str(counter) + '. Country: ')
+               if userc in supcountries:
+                  countryawnser.append(userc)
+               else:
+                  print 'Not supported, start the script again'
+         return countryawnser
 
 
 
