@@ -14,6 +14,7 @@ def setpacketinfoip(Ip_range,destination):
        
     
     else:
+       
        sourceip = random.choice(Ip_range)
        targetip = destination
        Ip_packet = IP()

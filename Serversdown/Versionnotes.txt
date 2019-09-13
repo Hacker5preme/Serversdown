@@ -1,6 +1,6 @@
 Version Notes:
 
-- Version 0.5
+- Version 0.6
 - Supported Options of Serversdown:
   -> Syn Flood
 
@@ -9,4 +9,5 @@ Version Notes:
   -> Attack still only over one targetport  
 
 -Added Features on this version:
-  -> Speed of sending packages increased
+  -> Anonymization through chosen multiple countrys
+  -> Huge Bug fixes

@@ -66,10 +66,9 @@ def anonymizing_input(supcountries):
          print 'Input the country of your choice'
          awnsercountry = raw_input('')
          print ''
-         awnsercountry = awnsercountry.replace(' ', '')
          print 'Selected Country ' + awnsercountry
          if(awnsercountry in supcountries):
-           return(awnsercountry)
+            return(awnsercountry)
          
          else:
            print 'The Country of your choice is not supported.' 
