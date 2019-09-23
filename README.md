@@ -19,10 +19,10 @@ How does Serversdown work:
 Legal notice : Only use this tool for penetration testing if you are allowed and authorised  by the owner of the target. ;)
 
 How to download and use this tool:
-- Execute "git clone + link of the repository" in the terminal.
+- Donload the newest release of Serversdown
 - Navigate to the cloned folder.
 - Execute "chmod +x install.sh" in the terminal.
-- Execute "chmod +x Serversdown.py" in the terminal.
-- Execute "python Serversdown.py" in the terminal.
+- Execute "chmod +x Serversdown.sh" in the terminal.
+- Execute "bash install.sh in the terminal.
 
 # Start attacking
