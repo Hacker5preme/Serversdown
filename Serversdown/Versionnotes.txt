@@ -1,6 +1,6 @@
 Version Notes:
 
-- Version 0.6
+- Version 0.7
 - Supported Options of Serversdown:
   -> Syn Flood
 
@@ -9,5 +9,6 @@ Version Notes:
   -> Attack still only over one targetport  
 
 -Added Features on this version:
-  -> Anonymization through chosen multiple countrys
-  -> Huge Bug fixes
+  -> Changed python enviroment to pypy
+  -> Increased speed by implementing multiprocessing
+  -> Small bug fixes
