@@ -23,6 +23,6 @@ How to download and use this tool:
 - Navigate to the cloned folder.
 - Execute "chmod +x install.sh" in the terminal.
 - Execute "chmod +x Serversdown.sh" in the terminal.
-- Execute "bash install.sh in the terminal.
+- Execute "bash install.sh" in the terminal.
 
 # Start attacking
