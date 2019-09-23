@@ -53,6 +53,9 @@ def chooseiprange(awnser_anonymizing, supcountries):
 
 def ipRange(useriprange):
    import ipaddress
+   import os
+   os.system('clear')
+   print 'Do something good for the enviroment while the IP-adresses are getting calculated'
    Ip_range = []
    for element in useriprange:
         start_ip = useriprange[0]

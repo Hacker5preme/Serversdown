@@ -1,5 +1,5 @@
 #!/bin/bash
-apt-get install pypy pypy:dev
+apt-get install pypy pypy-dev
 wget https://bootstrap.pypa.io/get-pip.py
 pypy get-pip.py
 pypy -m pip install scapy

