@@ -43,11 +43,10 @@ def anonymizing_input(supcountries):
     else:
       print ''      
       print 'Anonymization selected'
-      print 'There are 3 anonymizing possibilies'
+      print 'There are 2 anonymizing possibilies'
       print ''
-      print '1: Input your one IP-adress you want to spoof to'
-      print '2: Choose a country and we change the ip adress every 10 packages to another one of the chosen country' 
-      print '3: Choose multiple Countries to anoymize through'
+      print '1: Input your one IP-adress you want to spoof to' 
+      print '2: Choose one or multiple Countries to anoymize through'
       print ''
       awnserchoice = raw_input('Input the number of your choice: ')
       
@@ -57,33 +56,19 @@ def anonymizing_input(supcountries):
          print 'Input your IP-adress you want to spoof to'
          sourceip = raw_input()
          return sourceip
-      
+     
+       
       if(awnserchoice == '2'):
          print ''
          print 'Your Choice: 2'
-         print 'Supported countries till now ' + str(len(supcountries))
-         print 'Input the first letter of the country you want to anonymize through (As a capital letter: '
-         countryselec = raw_input()
-         for element in supcountries:
-             if str(element[0]) != countryselec:
-                supcountries.remove(element)
-         print 'Supported countries till now ' + str(supcountries)
-         print 'Input the country of your choice'
-         awnsercountry = raw_input('')
-         print ''
-         print 'Selected Country ' + awnsercountry
-         if(awnsercountry in supcountries):
-            return(awnsercountry)
-         
+         print 'All countrys with beginning with A supported '
+         question = raw_input('Do you want a list of them? Y | N ')
+         if question == 'Y':
+            for element in supcountries:
+                print element
+            print ''
          else:
-           print 'The Country of your choice is not supported.' 
-           print 'Check your awnser on spelling and restart the script' 
-     
-       
-      if(awnserchoice == '3'):
-         print ''
-         print 'Your Choice: 3'
-         print 'Supported countries till now ' + str(supcountries)
+              pass
          amountcountrys = raw_input('Please input the amount of countries you want to select ')
          amountcountrys = int(amountcountrys)
          counter = 0

@@ -4,11 +4,9 @@ import os
 print 'Serversdown'
 print ''
 filepath = 'Versionnotes.txt'
-with open(filepath) as fp:
-   line = fp.readline()
-   while line:
-       print line
-       line = fp.readline()
+a = open(filepath, 'r')
+for line in a.readlines():
+    print line
        
 
 
