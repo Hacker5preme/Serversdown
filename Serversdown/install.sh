@@ -5,6 +5,7 @@ pypy get-pip.py
 pypy -m pip install scapy
 pypy -m pip install multiprocessing
 pypy -m pip install ipaddress
+pypy -m pip install requests
 pypy Serversdown.py
 
 

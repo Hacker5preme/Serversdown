@@ -6,14 +6,12 @@ import socket
 from userinputs_synflood import *
 from Ipchanging_synflood import *
 from definepacket_synflood import *
+from unanonymizedIP_synflood import *
 import os
 import random
 import time
 
-hostname = socket.gethostname()
-yourIP = socket.gethostbyname(hostname)
-hostname = socket.gethostname()
-yourIP = socket.gethostbyname(hostname)
+yourIP = uanoIP()	
 supcountries = supcountries()
 destination = definetarget()
 targetport = defineporttarget()
