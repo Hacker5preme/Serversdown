@@ -17,9 +17,17 @@ def supcountries():
 def definetarget():
   print 'Welcome to syn flood attack coded by hacker5preme'
   print ''  
-  print 'Please enter the target IP'
-  destination = raw_input()
-  print ''
+  print 'If you want to attack a Website press Y, if not press N'
+  target_choice = raw_input()
+  if target_choice = 'N':
+     print 'Please enter the target IP'
+     destination = raw_input()
+     print ''
+  if target_choice = 'Y':
+     print 'Please the target website in this format: http(s)://url.ending'
+     destination = raw_input()
+     print()
+
   return destination
 
 def defineporttarget():
