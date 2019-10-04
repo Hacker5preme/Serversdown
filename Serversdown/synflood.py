@@ -53,7 +53,7 @@ if type(awnser_anonymizing) == list and awnser_anonymizing[0] in supcountries:
 
 
 
-p = multiprocessing.Process(target= sendpacket, args=(Ip_range, destinationnew, targetport))
+p = multiprocessing.Process(target= sendpacket, args=(Ip_range, destinationnew, targetport, destination))
 p.start()
 p.join()
 

@@ -13,4 +13,6 @@ def checkserversdown(destination):
        print 'ATTACK SUCCESFULL!!!'
        time.sleep(10)
        
- 
+
+
+
