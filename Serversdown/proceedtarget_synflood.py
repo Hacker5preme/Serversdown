@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-def proceedtarget(destiantion):
+def proceedtarget(destination):
     import socket
     destinationnew = str(destination)
     if 'h' in destinationnew: 

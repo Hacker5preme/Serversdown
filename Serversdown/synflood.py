@@ -6,11 +6,11 @@ import socket
 import os
 import random
 import time
-import requets
+import requests
 from userinputs_synflood import *
 from Ipchanging_synflood import *
 from definepacket_synflood import *
-from unanonymizedIP_synflood import *
+from uanonymizedIP_synflood import *
 from proceedtarget_synflood import *
 
 

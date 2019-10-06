@@ -20,12 +20,14 @@ def definetarget():
   print 'If you want to attack a Website press Y, if not press N'
   target_choice = raw_input()
 
-  if target_choice = 'N':
+  if target_choice == 'N':
      print 'Please enter the target IP'
+     global destination
      destination = raw_input()
      print ''
-  if target_choice = 'Y':
+  if target_choice == 'Y':
      print 'Please the target website in this format: http(s)://url.ending'
+     global destination
      destination = raw_input()
      print()
 
