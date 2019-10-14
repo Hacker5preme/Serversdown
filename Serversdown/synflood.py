@@ -20,7 +20,7 @@ destinationnew = proceedtarget(destination)
 targetport = defineporttarget()
 awnser_anonymizing = anonymizing_input(supcountries)
 
-   
+
 
 if awnser_anonymizing == yourIP:
    Ip_range = yourIP
