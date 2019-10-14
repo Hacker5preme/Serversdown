@@ -1,8 +1,6 @@
 # Serversdown
 This is a tool written by Hacker5preme to give people the possibility to attack targets per denial of service attacks anonymized.
 
-IMPORTANT: Only download verified releases:
-- Only then the functionailty is guaranteed.
 
 Serversdown was coded in a Linux environment and the version of Python is 2.7.
 
