@@ -14,6 +14,7 @@ from uanonymizedIP_synflood import *
 from proceedtarget_synflood import *
 from configurefw_synflood import *
 from changedns_synflood import *
+
 changedns()
 yourIP = uanoIP()
 supcountries = supcountries()
@@ -21,7 +22,7 @@ destination = definetarget()
 destinationnew = proceedtarget(destination)
 targetport = defineporttarget()
 awnser_anonymizing = anonymizing_input(supcountries)
-
+usertorawnser = usetorask()
 
 
 if awnser_anonymizing == yourIP:

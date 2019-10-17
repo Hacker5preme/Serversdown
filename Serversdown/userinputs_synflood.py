@@ -93,6 +93,17 @@ def anonymizing_input(supcountries):
                   print 'Not supported, start the script again'
          return countryawnser
 
+def usetorask():
+    import os 
+    os.system('clear')
+    print 'Do you want to anonymize your Serversdown checks through TOR  Y | N'
+    awnser = raw_input()
+    if awnser == 'Y':
+       print 'Additional anonymization selected'
+       return awnser
+
+
+
 
 
 
